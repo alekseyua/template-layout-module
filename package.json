@@ -1,0 +1,19 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "template layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alekseyua/template-layout-module.git"
+  },
+  "author": "Aleksey Chornoivan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alekseyua/template-layout-module/issues"
+  },
+  "homepage": "https://github.com/alekseyua/template-layout-module#readme"
+}
