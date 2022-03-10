@@ -76,7 +76,7 @@ export const watch = () => {
 export { paths }; 
 
 export const dev = gulp.series("clean","smart-grid",
-    gulp.parallel(["views", "styles","scripts"]),
+    gulp.parallel(["views", "styles","scripts", "images"]),
     gulp.parallel("serve")
 )
 

@@ -6,7 +6,7 @@ module.exports = {
                 create: {
                     techs: ["html", "scss", "js"],
                     levels: {
-                        "src/blocks/modules": {
+                        "#src/blocks/modules": {
                             default: true
                         }
                     }
