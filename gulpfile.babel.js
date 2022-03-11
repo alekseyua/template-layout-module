@@ -47,7 +47,8 @@ const requireDir = require("require-dir"),
         fonts: {
             src: "./#src/fonts/**/*.{woff,woff2}",
             dist: "./dist/fonts/",
-            watch: "./#src/fonts/**/*.{woff,woff2}"
+            watch: "./#src/fonts/**/*.{woff,woff2}",
+            otp: "./#src/fonts/*.{txt}"
         },
         favicons: {
             src: "./#src/img/favicon/*.{jpg,jpeg,png,gif}",
@@ -76,7 +77,7 @@ export const watch = () => {
 export { paths }; 
 
 export const dev = gulp.series("clean","smart-grid",
-    gulp.parallel(["views", "styles","scripts", "images"]),
+    gulp.parallel(["views", "styles","scripts", "images", "webp", "favicons",]),
     gulp.parallel("serve")
 )
 
