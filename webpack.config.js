@@ -1,5 +1,5 @@
-const path = require("path");
 const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
     plugins: [ 
@@ -14,7 +14,12 @@ module.exports = {
     ],
     
     entry: {
-        main: "./#src/js/index.js",
+        // main: "./#src/js/index.js",
+        main:[
+        'webpack/hot/dev-server',
+        'webpack-hot-middleware/client',
+        './#src/js/index.js'
+        ]
     },
 
     output: {
@@ -42,15 +47,24 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
+                    //loader: ['babel-loader','react-hot']
                     loader: require.resolve("babel-loader"),
                     // query: {
                     //     presets: [
                     //         ["@babel/preset-env", { modules: false }]
                     //     ]
                     // }
-                }
+                },
+
             }
-        ]
+        ],
+        // loaders: [
+        //     {
+        //         test: /\.js?$/,
+        //         exclude: /node_modules/,
+        //         loaders: ['react-hot', 'babel']
+        //     }
+        // ]
     },
 
     resolve: {

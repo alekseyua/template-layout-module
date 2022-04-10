@@ -16,6 +16,8 @@ import plumber from "gulp-plumber";
 import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
+//const cleanCSS = require('gulp-clean-css');
+import cleanCSS from 'gulp-clean-css';
 
 const argv = yargs.argv,
     production = !!argv.production;
@@ -25,7 +27,10 @@ gulp.task("styles", () => {
     return gulp.src(paths.styles.src)
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())
-        .pipe(sass())
+        // .pipe(sass())
+        .pipe(sass().on('error',err=>{
+            console.log(`err= ${err}`);            
+        }))
         .pipe(groupmedia())
         .pipe(gulpif(production, autoprefixer({
             cascade: false,
@@ -57,5 +62,7 @@ gulp.task("styles", () => {
         .pipe(debug({
             "title": "CSS files"
         }))
-        .on("end", browsersync.reload);
+        .on("end", browsersync.stream)
+        // .on("end", browsersync.reload);
+
 });

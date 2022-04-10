@@ -64,9 +64,12 @@
     "imagemin-webp": "6.0.0",
     "imagemin-zopfli": "^7.0.0",
     "lint-staged": "^12.3.5",
+    "react-hot-loader": "^4.13.0",
     "sass": "1.32.13",
     "ttf2woff": "^3.0.0",
     "webpack": "^5.70.0",
+    "webpack-dev-middleware": "^5.3.1",
+    "webpack-hot-middleware": "^2.25.1",
     "webpack-stream": "^7.0.0",
     "yargs": "^17.3.1"
   },
