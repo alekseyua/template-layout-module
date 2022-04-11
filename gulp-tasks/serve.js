@@ -25,7 +25,7 @@ gulp.task("serve", () => {
     });
 
     gulp.watch(paths.views.watch, gulp.parallel("views"));
-    // gulp.watch(paths.styles.watch, gulp.parallel("styles"));
+    gulp.watch(paths.styles.watch, gulp.parallel("styles"));
     gulp.watch(paths.styles.watch).on('change', (err)=>{
         gulp.watch(paths.styles.watch, gulp.parallel("styles"));
     });
