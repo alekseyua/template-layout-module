@@ -1,0 +1,6 @@
+.bla{
+	background-color: darkblue;
+	width: 1500px;
+	@include adaptive-value('width',1400,100,px,2);
+	height: 300px;
+}
